@@ -1,0 +1,22 @@
+inherited BaseSubForm1: TBaseSubForm1
+  Caption = 'UrbanCohort Wallet First Run'
+  DesignerMasterStyle = 0
+  object TitleLayout: TLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object TitleLabel: TLabel
+      Align = Center
+      AutoSize = True
+      Size.Width = 341.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      TextSettings.WordWrap = False
+      Text = 'Welcome to UrbanCohort'#39's Pascal Wallet'
+      TabOrder = 0
+    end
+  end
+end

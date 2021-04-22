@@ -1,0 +1,303 @@
+inherited SettingsFrame: TSettingsFrame
+  Padding.Left = 3.000000000000000000
+  Size.Width = 400.000000000000000000
+  Size.Height = 389.000000000000000000
+  inherited FrameLayout: TLayout
+    Size.Width = 397.000000000000000000
+    Size.Height = 357.000000000000000000
+    object LanguageLayout: TLayout
+      Align = Top
+      Padding.Bottom = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 101.000000000000000000
+      Size.Width = 391.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object LanguageCaption: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Language'
+        TabOrder = 0
+      end
+      object LanguageList: TComboBox
+        Align = Left
+        Position.X = 120.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnChange = LanguageListChange
+      end
+    end
+    object ThemeLayout: TLayout
+      Align = Top
+      Padding.Bottom = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 137.000000000000000000
+      Size.Width = 391.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ThemeCaption: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Theme'
+        TabOrder = 0
+      end
+      object ThemeList: TComboBox
+        Align = Left
+        Items.Strings = (
+          'Pascal'
+          'Dark'
+          'Light')
+        Position.X = 120.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object FiatLayout: TLayout
+      Align = Top
+      Padding.Bottom = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 65.000000000000000000
+      Size.Width = 391.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object CurrencyCaption: TLabel
+        Align = Left
+        Size.Width = 120.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Base Currency'
+        TabOrder = 0
+      end
+      object CurrencyList: TComboBox
+        Align = Left
+        Items.Strings = (
+          'GBP'
+          'EUR'
+          'USD'
+          'BTC')
+        Position.X = 120.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnChange = CurrencyListChange
+      end
+    end
+    object NodeLayout: TLayout
+      Align = Top
+      Padding.Bottom = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 391.000000000000000000
+      Size.Height = 59.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object NodeStatusLabel: TLabel
+        Align = Bottom
+        Margins.Top = 3.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 391.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'NodeStatusLabel'
+        TabOrder = 0
+      end
+      object Line1: TLine
+        Align = Bottom
+        LineType = Bottom
+        Position.Y = 51.000000000000000000
+        Size.Width = 391.000000000000000000
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object NodeSubLayout: TLayout
+        Align = Top
+        Size.Width = 391.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object NodeCaption: TLabel
+          Align = Left
+          Size.Width = 120.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'RPC Node'
+          TabOrder = 0
+        end
+        object NodeList: TComboBox
+          Align = Client
+          Size.Width = 238.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnChange = NodeListChange
+        end
+        object AddNodeButton: TSpeedButton
+          Action = AddNodeAction
+          Align = Right
+          Enabled = True
+          ImageIndex = -1
+          Margins.Left = 3.000000000000000000
+          Position.X = 361.000000000000000000
+          Size.Width = 30.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbuttonbordered'
+        end
+      end
+    end
+    object InfoLayout: TLayout
+      Align = Bottom
+      Position.X = 3.000000000000000000
+      Position.Y = 264.000000000000000000
+      Size.Width = 391.000000000000000000
+      Size.Height = 90.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object ConfigPathLayout: TLayout
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 391.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object ConfigPathCaption: TLabel
+          Align = Left
+          Size.Width = 120.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Config Path'
+          TabOrder = 0
+        end
+        object ConfigPathValue: TLabel
+          Align = Client
+          Size.Width = 271.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'ConfigPathValue'
+          TabOrder = 1
+        end
+      end
+      object Layout1: TLayout
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 391.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object LocalIPCaption: TLabel
+          Align = Left
+          Size.Width = 120.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Your Private IP'
+          TabOrder = 0
+        end
+        object LocalIPValue: TLabel
+          Align = Client
+          Cursor = crHandPoint
+          StyledSettings = [Family, Size]
+          HitTest = True
+          Size.Width = 271.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00040000000200000004000000}
+          TextSettings.FontColor = claSilver
+          Text = 'click to display'
+          TabOrder = 1
+          OnClick = DisplayIPActionExecute
+        end
+      end
+      object PublicIPLayout: TLayout
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Position.Y = 28.000000000000000000
+        Size.Width = 391.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object PublicIPCaption: TLabel
+          Align = Left
+          Size.Width = 120.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Your Public IP'
+          TabOrder = 0
+        end
+        object PublicIPValue: TLabel
+          Align = Client
+          Cursor = crHandPoint
+          StyledSettings = [Family, Size]
+          HitTest = True
+          Size.Width = 271.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00040000000200000004000000}
+          TextSettings.FontColor = claSilver
+          Text = 'click to display'
+          TabOrder = 1
+          OnClick = DisplayIPActionExecute
+        end
+      end
+    end
+  end
+  object BottomButtons: TLayout
+    Align = Bottom
+    Padding.Left = 3.000000000000000000
+    Padding.Top = 3.000000000000000000
+    Padding.Right = 3.000000000000000000
+    Padding.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 357.000000000000000000
+    Size.Width = 397.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object SaveButton: TButton
+      Action = SaveAction
+      Align = Right
+      Enabled = False
+      ImageIndex = -1
+      Position.X = 314.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object SettingsActions: TActionList
+    Left = 267
+    Top = 152
+    object SaveAction: TAction
+      Text = 'Save'
+      Enabled = False
+      OnExecute = SaveActionExecute
+    end
+    object AddNodeAction: TAction
+      Text = 'AddNodeAction'
+      OnExecute = AddNodeActionExecute
+    end
+    object DisplayIPAction: TAction
+      Text = 'DisplayIPAction'
+      OnExecute = DisplayIPActionExecute
+    end
+  end
+end

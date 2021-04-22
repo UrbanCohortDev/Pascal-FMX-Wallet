@@ -1,0 +1,27 @@
+object BaseFrame: TBaseFrame
+  Align = Client
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object FrameLayout: TLayout
+    Align = Client
+    Padding.Left = 3.000000000000000000
+    Padding.Top = 3.000000000000000000
+    Padding.Right = 3.000000000000000000
+    Padding.Bottom = 3.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Translate: TGlyph
+      AutoHide = False
+      Position.X = 280.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      ImageIndex = 9
+      Images = AssetsData.ImageList1
+    end
+  end
+end

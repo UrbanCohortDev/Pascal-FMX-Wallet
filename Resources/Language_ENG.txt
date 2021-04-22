@@ -1,0 +1,27 @@
+INVALID_LANGUAGE_CODE=The language code must contain 3 characters
+INVALID_CURRENCY_CODE=The currency code must contain 3 characters
+UNABLE_TO_DECRYPT_KEY=Unable to decrypt the key
+WALLET_LOCKED=Your wallet is locked
+SETTINGS_HAVE_CHANGED=You have changed, but not saved, your settings. Do you want to close anyway?
+ACTIVE_BUT_NOT_SUPPORTED=Active but not supported
+OOPS=Oops, a problem
+WELCOME_TO_PASCAL= Welcome To Pascal
+TGetStartedFrame.WelcomeLabel.Text=Welcome to Pascal. You will need a private/public key pair to get going. So do you want to:
+TGetStartedFrame.NewKeyRadio.Text=Create a new key pair
+TGetStartedFrame.ImportKeyRadio.Text=Import and existing private key
+TGetStartedFrame.PASALabel.Text[NEW_KEY]=A new key pair has been created for you. Do you want to get a PASA by
+TGetStartedFrame.NewPASARequest.Text=Ask someone to send you one
+TGetStartedFrame.NewPASAPayToKey.Text=Use the Pay To Key function
+TGetStartedFrame.ImportKeyLabel.Text=Paste your private key into the box below and click the Next button
+TGetStartedFrame.PASALabel.Text[IMPORTED_KEY]=Your key has been imported but does not have any PASA attached to it.  Do you want to get a PASA by
+TGetStartedFrame.SendPASALabel.Text=That's it, your keys are saved in your local wallet. Now give your public key (below) and copied to your clipboard to whoever is sending you the PASA
+TGetStartedFrame.KeyNameLabel.Text=Give your key a name and secure your keyring with a password
+TGetStartedFrame.KeyName.TextPrompt=Enter your Key Name here
+TGetStartedFrame.Password.TextPrompt=Enter your password here
+TGetStartedFrame.RepeatPassword.TextPrompt=Repeat your password here
+TGetStartedFrame.PayToKeyLabel.Text=That's it, your keys are saved in your local wallet. Now use Pay To Key
+TGetStartedFrame.MSG.NO_KEY_METHOD_SELECTED=Please indicate how you want to get your key pair
+TGetStartedFrame.MSG.NO_PASA_METHOD_SELECTED=Please indicate how you want to get your first PASA
+TGetStartedFrame.MSG.ENTER_PASSWORD=Please enter a password to secure your wallet
+TGetStartedFrame.MSG.PASSWORDS_DIFFERENT=Your passwords do not match
+

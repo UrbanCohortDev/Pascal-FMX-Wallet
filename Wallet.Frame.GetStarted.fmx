@@ -1,0 +1,336 @@
+inherited GetStartedFrame: TGetStartedFrame
+  Size.Width = 430.000000000000000000
+  Size.Height = 296.000000000000000000
+  inherited FrameLayout: TLayout
+    Size.Width = 430.000000000000000000
+    Size.Height = 296.000000000000000000
+    object ButtonLayout: TLayout
+      Align = Bottom
+      Position.X = 3.000000000000000000
+      Position.Y = 256.000000000000000000
+      Size.Width = 424.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object NextButton: TSpeedButton
+        Align = Right
+        Images = AssetsData.ImageList1
+        Margins.Left = 3.000000000000000000
+        Position.X = 344.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'nexttoolbutton'
+        Text = 'NextButton'
+        OnClick = NextButtonClick
+      end
+      object PreviousButton: TSpeedButton
+        Align = Left
+        Size.Width = 80.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'priortoolbutton'
+        Text = 'PreviousButton'
+      end
+      object CancelButton: TSpeedButton
+        Align = Right
+        Position.X = 261.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'escapetoolbutton'
+        Text = 'CancelButton'
+      end
+    end
+    object WizardControl: TTabControl
+      Align = Client
+      Padding.Left = 6.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Size.Width = 424.000000000000000000
+      Size.Height = 253.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 5
+      TabOrder = 1
+      TabPosition = Dots
+      Sizes = (
+        412s
+        253s
+        412s
+        253s
+        412s
+        253s
+        412s
+        253s
+        412s
+        253s
+        412s
+        253s
+        412s
+        253s)
+      object KeyOptionTab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'KeyOptionTab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object ImportKeyRadio: TRadioButton
+          GroupName = 'KeyMethod'
+          Position.X = 85.000000000000000000
+          Position.Y = 125.000000000000000000
+          Size.Width = 209.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Import an existing key'
+        end
+        object WelcomeLabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 
+            'Welcome to Pascal. You will need a private/public key pair to ge' +
+            't going. So do you want to:'
+          TabOrder = 0
+        end
+        object NewKeyRadio: TRadioButton
+          GroupName = 'KeyMethod'
+          Position.X = 85.000000000000000000
+          Position.Y = 85.000000000000000000
+          Size.Width = 209.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Create a new key pair'
+        end
+      end
+      object ImportKeyTab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'ImportKeyTab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object ImportKeyLabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 
+            'Paste your private key into the box below and click the Next but' +
+            'ton'
+          TabOrder = 0
+        end
+        object PrivateKeyMemo: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          TextSettings.WordWrap = True
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Position.X = 10.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 391.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 391.000000000000000000
+          Viewport.Height = 73.000000000000000000
+        end
+      end
+      object KeyNameTab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'KeyNameTab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object KeyNameLabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 'Give your key a name and secure your keyring with a password'
+          TabOrder = 0
+        end
+        object KeyName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          TabOrder = 3
+          Position.X = 42.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 311.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Enter your Key Name here'
+        end
+        object Password: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          TabOrder = 2
+          Password = True
+          Position.X = 42.000000000000000000
+          Position.Y = 144.000000000000000000
+          Size.Width = 311.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Enter your password here'
+        end
+        object RepeatPassword: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          TabOrder = 1
+          Password = True
+          Position.X = 42.000000000000000000
+          Position.Y = 176.000000000000000000
+          Size.Width = 311.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextPrompt = 'Repeat your password here'
+        end
+      end
+      object PASAOptionTab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'PASAOptionTab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object PASALabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 
+            'A new key pair has been created for you. Do you want to get a PA' +
+            'SA by'
+          TabOrder = 0
+        end
+        object NewPASARequest: TRadioButton
+          Position.X = 85.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 292.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Ask someone to send you one'
+        end
+        object NewPASAPayToKey: TRadioButton
+          Position.X = 85.000000000000000000
+          Position.Y = 125.000000000000000000
+          Size.Width = 308.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Use the Pay To Key function'
+        end
+      end
+      object FinishWithSendPASATab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'FinishWithSendPASATab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object SendPASALabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 
+            'That'#39's it, your keys are saved in your local wallet. Now give yo' +
+            'ur public key (below) and copied to your clipboard to whoever is' +
+            ' sending you the PASA'
+          TabOrder = 0
+        end
+        object Memo1: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          ReadOnly = True
+          TextSettings.WordWrap = True
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          Position.X = 10.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 391.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 391.000000000000000000
+          Viewport.Height = 73.000000000000000000
+        end
+      end
+      object FinishWithPayToKeyTab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'FinishWithPayToKeyTab'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object PayToKeyLabel: TLabel
+          Align = Top
+          Size.Width = 412.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.VertAlign = Leading
+          Text = 
+            'That'#39's it, your keys are saved in your local wallet. Now use Pay' +
+            ' To Key'
+          TabOrder = 0
+          OnClick = PayToKeyLabelClick
+        end
+      end
+      object FinishWithExisitingPASATab: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'FinishWithExisitingPASATab'
+      end
+    end
+  end
+end
