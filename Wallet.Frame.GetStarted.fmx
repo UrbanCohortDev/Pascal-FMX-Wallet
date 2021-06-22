@@ -1,14 +1,15 @@
 inherited GetStartedFrame: TGetStartedFrame
-  Size.Width = 430.000000000000000000
-  Size.Height = 296.000000000000000000
+  Align = Center
+  Size.Width = 315.000000000000000000
+  Size.Height = 330.000000000000000000
   inherited FrameLayout: TLayout
-    Size.Width = 430.000000000000000000
-    Size.Height = 296.000000000000000000
+    Size.Width = 315.000000000000000000
+    Size.Height = 330.000000000000000000
     object ButtonLayout: TLayout
       Align = Bottom
       Position.X = 3.000000000000000000
-      Position.Y = 256.000000000000000000
-      Size.Width = 424.000000000000000000
+      Position.Y = 290.000000000000000000
+      Size.Width = 309.000000000000000000
       Size.Height = 37.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -16,7 +17,7 @@ inherited GetStartedFrame: TGetStartedFrame
         Align = Right
         Images = AssetsData.ImageList1
         Margins.Left = 3.000000000000000000
-        Position.X = 344.000000000000000000
+        Position.X = 229.000000000000000000
         Size.Width = 80.000000000000000000
         Size.Height = 37.000000000000000000
         Size.PlatformDefault = False
@@ -34,7 +35,7 @@ inherited GetStartedFrame: TGetStartedFrame
       end
       object CancelButton: TSpeedButton
         Align = Right
-        Position.X = 261.000000000000000000
+        Position.X = 146.000000000000000000
         Size.Width = 80.000000000000000000
         Size.Height = 37.000000000000000000
         Size.PlatformDefault = False
@@ -46,32 +47,32 @@ inherited GetStartedFrame: TGetStartedFrame
       Align = Client
       Padding.Left = 6.000000000000000000
       Padding.Right = 6.000000000000000000
-      Size.Width = 424.000000000000000000
-      Size.Height = 253.000000000000000000
+      Size.Width = 309.000000000000000000
+      Size.Height = 287.000000000000000000
       Size.PlatformDefault = False
-      TabIndex = 5
+      TabIndex = 0
       TabOrder = 1
       TabPosition = Dots
       Sizes = (
-        412s
-        253s
-        412s
-        253s
-        412s
-        253s
-        412s
-        253s
-        412s
-        253s
-        412s
-        253s
-        412s
-        253s)
+        297s
+        287s
+        297s
+        287s
+        297s
+        287s
+        297s
+        287s
+        297s
+        287s
+        297s
+        287s
+        297s
+        287s)
       object KeyOptionTab: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -80,20 +81,10 @@ inherited GetStartedFrame: TGetStartedFrame
         Text = 'KeyOptionTab'
         ExplicitSize.cx = 8.000000000000000000
         ExplicitSize.cy = 8.000000000000000000
-        object ImportKeyRadio: TRadioButton
-          GroupName = 'KeyMethod'
-          Position.X = 85.000000000000000000
-          Position.Y = 125.000000000000000000
-          Size.Width = 209.000000000000000000
-          Size.Height = 19.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = 'Import an existing key'
-        end
         object WelcomeLabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 
@@ -101,15 +92,37 @@ inherited GetStartedFrame: TGetStartedFrame
             't going. So do you want to:'
           TabOrder = 0
         end
-        object NewKeyRadio: TRadioButton
-          GroupName = 'KeyMethod'
-          Position.X = 85.000000000000000000
-          Position.Y = 85.000000000000000000
-          Size.Width = 209.000000000000000000
-          Size.Height = 19.000000000000000000
+        object WelcomeLayout: TLayout
+          Align = Client
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 222.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          Text = 'Create a new key pair'
+          object NewKeyRadio: TRadioButton
+            Align = Top
+            GroupName = 'KeyMethod'
+            Margins.Bottom = 10.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Create a new key pair'
+          end
+          object ImportKeyRadio: TRadioButton
+            Align = Top
+            GroupName = 'KeyMethod'
+            Position.X = 5.000000000000000000
+            Position.Y = 34.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'Import an existing key'
+          end
         end
       end
       object ImportKeyTab: TTabItem
@@ -127,8 +140,8 @@ inherited GetStartedFrame: TGetStartedFrame
         ExplicitSize.cy = 8.000000000000000000
         object ImportKeyLabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 
@@ -136,19 +149,28 @@ inherited GetStartedFrame: TGetStartedFrame
             'ton'
           TabOrder = 0
         end
-        object PrivateKeyMemo: TMemo
-          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-          DataDetectorTypes = []
-          TextSettings.WordWrap = True
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Position.X = 10.000000000000000000
-          Position.Y = 72.000000000000000000
-          Size.Width = 391.000000000000000000
-          Size.Height = 73.000000000000000000
+        object ImportLayout: TLayout
+          Align = Client
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 222.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          Viewport.Width = 391.000000000000000000
-          Viewport.Height = 73.000000000000000000
+          object PrivateKeyMemo: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            TextSettings.WordWrap = True
+            Align = Top
+            Position.X = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 84.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Viewport.Width = 288.000000000000000000
+            Viewport.Height = 80.000000000000000000
+          end
         end
       end
       object KeyNameTab: TTabItem
@@ -166,47 +188,60 @@ inherited GetStartedFrame: TGetStartedFrame
         ExplicitSize.cy = 8.000000000000000000
         object KeyNameLabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 'Give your key a name and secure your keyring with a password'
           TabOrder = 0
         end
-        object KeyName: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          TabOrder = 3
-          Position.X = 42.000000000000000000
-          Position.Y = 96.000000000000000000
-          Size.Width = 311.000000000000000000
-          Size.Height = 22.000000000000000000
+        object KeyNameLayout: TLayout
+          Align = Client
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 222.000000000000000000
           Size.PlatformDefault = False
-          TextPrompt = 'Enter your Key Name here'
-        end
-        object Password: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          TabOrder = 2
-          Password = True
-          Position.X = 42.000000000000000000
-          Position.Y = 144.000000000000000000
-          Size.Width = 311.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TextPrompt = 'Enter your password here'
-        end
-        object RepeatPassword: TEdit
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Anchors = [akLeft, akTop, akRight, akBottom]
           TabOrder = 1
-          Password = True
-          Position.X = 42.000000000000000000
-          Position.Y = 176.000000000000000000
-          Size.Width = 311.000000000000000000
-          Size.Height = 22.000000000000000000
-          Size.PlatformDefault = False
-          TextPrompt = 'Repeat your password here'
+          object KeyName: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 3
+            Position.X = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Enter your Key Name here'
+          end
+          object Password: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 2
+            Password = True
+            Position.X = 5.000000000000000000
+            Position.Y = 50.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Enter your password here'
+          end
+          object RepeatPassword: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Top
+            TabOrder = 1
+            Password = True
+            Position.X = 5.000000000000000000
+            Position.Y = 90.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Repeat your password here'
+          end
         end
       end
       object PASAOptionTab: TTabItem
@@ -224,8 +259,8 @@ inherited GetStartedFrame: TGetStartedFrame
         ExplicitSize.cy = 8.000000000000000000
         object PASALabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 
@@ -233,23 +268,35 @@ inherited GetStartedFrame: TGetStartedFrame
             'SA by'
           TabOrder = 0
         end
-        object NewPASARequest: TRadioButton
-          Position.X = 85.000000000000000000
-          Position.Y = 96.000000000000000000
-          Size.Width = 292.000000000000000000
-          Size.Height = 19.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = 'Ask someone to send you one'
-        end
-        object NewPASAPayToKey: TRadioButton
-          Position.X = 85.000000000000000000
-          Position.Y = 125.000000000000000000
-          Size.Width = 308.000000000000000000
-          Size.Height = 19.000000000000000000
+        object PASAOptionLayout: TLayout
+          Align = Client
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 222.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          Text = 'Use the Pay To Key function'
+          object NewPASARequest: TRadioButton
+            Align = Top
+            Margins.Bottom = 10.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'Ask someone to send you one'
+          end
+          object NewPASAPayToKey: TRadioButton
+            Align = Top
+            Position.X = 5.000000000000000000
+            Position.Y = 34.000000000000000000
+            Size.Width = 292.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Use the Pay To Key function'
+          end
         end
       end
       object FinishWithSendPASATab: TTabItem
@@ -267,8 +314,8 @@ inherited GetStartedFrame: TGetStartedFrame
         ExplicitSize.cy = 8.000000000000000000
         object SendPASALabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 
@@ -282,22 +329,24 @@ inherited GetStartedFrame: TGetStartedFrame
           DataDetectorTypes = []
           ReadOnly = True
           TextSettings.WordWrap = True
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          Position.X = 10.000000000000000000
-          Position.Y = 80.000000000000000000
-          Size.Width = 391.000000000000000000
-          Size.Height = 73.000000000000000000
+          Align = Top
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 65.000000000000000000
+          Size.Width = 287.000000000000000000
+          Size.Height = 107.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          Viewport.Width = 391.000000000000000000
-          Viewport.Height = 73.000000000000000000
+          Viewport.Width = 283.000000000000000000
+          Viewport.Height = 103.000000000000000000
         end
       end
       object FinishWithPayToKeyTab: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 8.000000000000000000
         Size.Height = 8.000000000000000000
         Size.PlatformDefault = False
@@ -308,8 +357,8 @@ inherited GetStartedFrame: TGetStartedFrame
         ExplicitSize.cy = 8.000000000000000000
         object PayToKeyLabel: TLabel
           Align = Top
-          Size.Width = 412.000000000000000000
-          Size.Height = 50.000000000000000000
+          Size.Width = 297.000000000000000000
+          Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TextSettings.VertAlign = Leading
           Text = 

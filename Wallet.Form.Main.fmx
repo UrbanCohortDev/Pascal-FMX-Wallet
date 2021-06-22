@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 0
   Caption = 'Urban Cohort '
   ClientHeight = 480
-  ClientWidth = 468
+  ClientWidth = 422
   StyleBook = StylePascal
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -110,7 +110,7 @@ object MainForm: TMainForm
   end
   object MainLayout: TLayout
     Align = Client
-    Size.Width = 399.000000000000000000
+    Size.Width = 353.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
@@ -119,7 +119,7 @@ object MainForm: TMainForm
       Padding.Top = 3.000000000000000000
       Padding.Right = 3.000000000000000000
       Padding.Bottom = 3.000000000000000000
-      Size.Width = 399.000000000000000000
+      Size.Width = 353.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -141,7 +141,7 @@ object MainForm: TMainForm
       Padding.Top = 3.000000000000000000
       Padding.Right = 3.000000000000000000
       Padding.Bottom = 3.000000000000000000
-      Size.Width = 399.000000000000000000
+      Size.Width = 353.000000000000000000
       Size.Height = 416.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -149,7 +149,7 @@ object MainForm: TMainForm
     object FooterLayout: TLayout
       Align = Bottom
       Position.Y = 456.000000000000000000
-      Size.Width = 399.000000000000000000
+      Size.Width = 353.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2

@@ -83,6 +83,10 @@ Type
     RepeatPassword: TEdit;
     FinishWithExisitingPASATab: TTabItem;
     PayToKeyLabel: TLabel;
+    WelcomeLayout: TLayout;
+    ImportLayout: TLayout;
+    KeyNameLayout: TLayout;
+    PASAOptionLayout: TLayout;
     Procedure NextButtonClick(Sender: TObject);
     procedure PayToKeyLabelClick(Sender: TObject);
   Private
